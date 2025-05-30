@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -76,16 +75,25 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Professional Product Image */}
+          {/* Right Content - Enhanced Product Image Placeholder */}
           <div className="relative">
             <div className="relative mx-auto w-full max-w-[600px] aspect-square">
-              {/* Main product image container */}
-              <div className="relative w-full h-full bg-gradient-to-br from-white to-yellow-100 rounded-3xl shadow-2xl border-4 border-yellow-400 overflow-hidden">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Premium Sweet Putharekulu - Traditional Andhra Pradesh Delicacy"
-                  className="w-full h-full object-cover"
-                />
+              {/* Main product image container with realistic putharekulu styling */}
+              <div className="relative w-full h-full bg-gradient-to-br from-amber-50 to-orange-100 rounded-3xl shadow-2xl border-4 border-yellow-400 overflow-hidden">
+                {/* Simulated putharekulu layers pattern */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-yellow-100/80">
+                  <div className="absolute inset-8 bg-gradient-to-br from-yellow-200 to-orange-200 rounded-2xl opacity-90">
+                    <div className="absolute inset-4 bg-gradient-to-br from-amber-100 to-yellow-200 rounded-xl opacity-80">
+                      <div className="absolute inset-8 bg-gradient-to-br from-white to-yellow-100 rounded-lg opacity-70 flex items-center justify-center">
+                        <div className="text-center text-amber-800">
+                          <div className="text-6xl mb-4">🥞</div>
+                          <div className="text-xl font-bold">Sweet Putharekulu</div>
+                          <div className="text-sm opacity-80">Delicate Paper Thin Layers</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 
                 {/* Overlay with product info */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-8">

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -39,15 +38,33 @@ const ProductShowcase = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-20 items-center max-w-7xl mx-auto">
-          {/* Product Gallery */}
+          {/* Enhanced Product Gallery */}
           <div className="space-y-6">
-            {/* Main product image */}
-            <div className="relative aspect-square bg-gradient-to-br from-yellow-100 to-orange-100 rounded-3xl p-8 shadow-2xl border-4 border-yellow-400 overflow-hidden">
-              <img 
-                src="/placeholder.svg" 
-                alt="Premium Sweet Putharekulu close-up view showing delicate layers"
-                className="w-full h-full object-cover rounded-2xl"
-              />
+            {/* Main product image with putharekulu styling */}
+            <div className="relative aspect-square bg-gradient-to-br from-amber-50 to-orange-100 rounded-3xl p-8 shadow-2xl border-4 border-yellow-400 overflow-hidden">
+              {/* Enhanced putharekulu visual representation */}
+              <div className="w-full h-full bg-gradient-to-br from-white to-yellow-50 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                {/* Layered effect to simulate putharekulu texture */}
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-100/80 to-orange-100/80 rounded-2xl">
+                  <div className="absolute inset-4 bg-gradient-to-br from-white/90 to-yellow-50/90 rounded-xl">
+                    <div className="absolute inset-8 bg-gradient-to-br from-amber-50 to-yellow-100 rounded-lg flex items-center justify-center">
+                      <div className="text-center text-amber-900">
+                        <div className="text-8xl mb-6">🥞</div>
+                        <div className="text-2xl font-bold mb-2">Sweet Putharekulu</div>
+                        <div className="text-lg">Paper Thin Delicacy</div>
+                        <div className="text-sm opacity-80 mt-2">Multiple delicate layers</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Subtle pattern overlay */}
+                <div className="absolute inset-0 opacity-10">
+                  <div className="w-full h-full" style={{
+                    backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,.1) 10px, rgba(0,0,0,.1) 20px)',
+                  }}></div>
+                </div>
+              </div>
               
               {/* Image overlays */}
               <div className="absolute top-6 right-6 bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg border-2 border-white">
@@ -59,16 +76,25 @@ const ProductShowcase = () => {
               </div>
             </div>
             
-            {/* Thumbnail gallery */}
+            {/* Enhanced thumbnail gallery */}
             <div className="grid grid-cols-3 gap-4">
-              <div className="aspect-square bg-yellow-100 rounded-xl border-4 border-yellow-400 overflow-hidden">
-                <img src="/placeholder.svg" alt="Putharekulu packaging" className="w-full h-full object-cover" />
+              <div className="aspect-square bg-gradient-to-br from-yellow-100 to-orange-100 rounded-xl border-4 border-yellow-400 overflow-hidden flex items-center justify-center">
+                <div className="text-center text-amber-800">
+                  <div className="text-4xl mb-2">📦</div>
+                  <div className="text-xs font-bold">Premium<br/>Packaging</div>
+                </div>
               </div>
-              <div className="aspect-square bg-yellow-100 rounded-xl border-4 border-yellow-400 overflow-hidden">
-                <img src="/placeholder.svg" alt="Traditional preparation process" className="w-full h-full object-cover" />
+              <div className="aspect-square bg-gradient-to-br from-yellow-100 to-orange-100 rounded-xl border-4 border-yellow-400 overflow-hidden flex items-center justify-center">
+                <div className="text-center text-amber-800">
+                  <div className="text-4xl mb-2">👨‍🍳</div>
+                  <div className="text-xs font-bold">Traditional<br/>Process</div>
+                </div>
               </div>
-              <div className="aspect-square bg-yellow-100 rounded-xl border-4 border-yellow-400 overflow-hidden">
-                <img src="/placeholder.svg" alt="Gift box presentation" className="w-full h-full object-cover" />
+              <div className="aspect-square bg-gradient-to-br from-yellow-100 to-orange-100 rounded-xl border-4 border-yellow-400 overflow-hidden flex items-center justify-center">
+                <div className="text-center text-amber-800">
+                  <div className="text-4xl mb-2">🎁</div>
+                  <div className="text-xs font-bold">Gift Box<br/>Ready</div>
+                </div>
               </div>
             </div>
           </div>
