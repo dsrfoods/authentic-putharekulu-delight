@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import { Phone, ShoppingCart, Clock, Zap, Gift, Truck } from 'lucide-react';
+import { Phone, ShoppingCart, Clock, Zap, Gift, Truck, Shield, Star } from 'lucide-react';
 
 const QuickOrder = () => {
   const [timeLeft, setTimeLeft] = useState({ hours: 2, minutes: 30, seconds: 45 });
@@ -38,120 +38,141 @@ const QuickOrder = () => {
   const offers = [
     {
       title: "Flash Sale Special",
-      description: "Buy 2 Get 1 FREE + Free Delivery",
+      subtitle: "Most Popular Choice",
+      description: "Buy 2 Get 1 FREE + Free Premium Delivery",
       price: "₹1,098",
       originalPrice: "₹1,647",
       savings: "₹549",
-      popular: true
+      popular: true,
+      image: "/placeholder.svg"
     },
     {
-      title: "Family Pack",
-      description: "3kg Mix Pack + Premium Gift Box",
+      title: "Family Celebration Pack",
+      subtitle: "Perfect for Festivals",
+      description: "3kg Mixed Varieties + Elegant Gift Box",
       price: "₹2,499",
       originalPrice: "₹3,999",
-      savings: "₹1,500"
+      savings: "₹1,500",
+      image: "/placeholder.svg"
     },
     {
-      title: "Single Pack",
-      description: "500g Premium Pack",
+      title: "Taste Test Pack",
+      subtitle: "First Time Buyers",
+      description: "500g Premium Pack + Free Sample",
       price: "₹549",
       originalPrice: "₹799",
-      savings: "₹250"
+      savings: "₹250",
+      image: "/placeholder.svg"
     }
   ];
 
+  const benefits = [
+    { icon: Truck, title: "Free Express Delivery", subtitle: "Above ₹500 nationwide" },
+    { icon: Gift, title: "Premium Gift Packaging", subtitle: "Complimentary for all orders" },
+    { icon: Shield, title: "100% Money Back", subtitle: "If not completely satisfied" },
+    { icon: Clock, title: "Same Day Delivery", subtitle: "Available in select cities" }
+  ];
+
   return (
-    <section className="py-20 bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50">
+    <section className="py-24 bg-gradient-to-br from-red-50 via-orange-50 to-amber-50">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          {/* Urgency Header */}
-          <div className="text-center mb-12">
-            <Badge className="bg-red-500 text-white text-lg px-6 py-2 mb-4 animate-pulse">
-              🔥 LIMITED TIME OFFER - ENDING SOON! 🔥
+        <div className="max-w-6xl mx-auto">
+          {/* Professional urgency header */}
+          <div className="text-center mb-16">
+            <Badge className="bg-gradient-to-r from-red-500 to-orange-500 text-white text-xl px-8 py-4 mb-6 animate-pulse rounded-full shadow-lg">
+              🔥 EXCLUSIVE FLASH SALE - LIMITED TIME 🔥
             </Badge>
             
-            <h2 className="text-4xl lg:text-5xl font-bold text-amber-900 mb-4">
-              Order Now & Save Big!
+            <h2 className="text-5xl lg:text-6xl font-bold text-slate-800 mb-6">
+              Secure Your Order Now
             </h2>
             
-            <p className="text-xl text-amber-700 mb-6">
-              Special discount expires in:
+            <p className="text-2xl text-slate-600 mb-8">
+              This exclusive discount ends in:
             </p>
             
-            {/* Countdown Timer */}
-            <div className="flex justify-center gap-4 mb-8">
-              <div className="bg-red-500 text-white rounded-lg p-4 min-w-[80px]">
-                <div className="text-2xl font-bold">{timeLeft.hours.toString().padStart(2, '0')}</div>
-                <div className="text-sm">Hours</div>
-              </div>
-              <div className="bg-red-500 text-white rounded-lg p-4 min-w-[80px]">
-                <div className="text-2xl font-bold">{timeLeft.minutes.toString().padStart(2, '0')}</div>
-                <div className="text-sm">Minutes</div>
-              </div>
-              <div className="bg-red-500 text-white rounded-lg p-4 min-w-[80px]">
-                <div className="text-2xl font-bold">{timeLeft.seconds.toString().padStart(2, '0')}</div>
-                <div className="text-sm">Seconds</div>
-              </div>
+            {/* Professional countdown timer */}
+            <div className="flex justify-center gap-6 mb-12">
+              {[
+                { value: timeLeft.hours, label: 'Hours' },
+                { value: timeLeft.minutes, label: 'Minutes' },
+                { value: timeLeft.seconds, label: 'Seconds' }
+              ].map((time, index) => (
+                <div key={index} className="bg-gradient-to-br from-red-500 to-red-600 text-white rounded-2xl p-6 min-w-[100px] shadow-2xl">
+                  <div className="text-4xl font-bold">{time.value.toString().padStart(2, '0')}</div>
+                  <div className="text-sm font-medium opacity-90">{time.label}</div>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Quick Order Options */}
-          <div className="grid lg:grid-cols-3 gap-6 mb-12">
+          {/* Professional offer selection */}
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
             {offers.map((offer, index) => (
               <Card 
                 key={index}
-                className={`cursor-pointer transition-all duration-300 ${
+                className={`cursor-pointer transition-all duration-300 overflow-hidden ${
                   selectedOffer === index 
-                    ? 'border-red-500 bg-red-50 shadow-xl scale-105' 
-                    : 'border-amber-200 hover:border-red-300 hover:shadow-lg'
-                } ${offer.popular ? 'ring-2 ring-orange-400' : ''}`}
+                    ? 'border-red-500 bg-gradient-to-br from-red-50 to-orange-50 shadow-2xl scale-105' 
+                    : 'border-slate-200 hover:border-red-300 hover:shadow-xl'
+                } ${offer.popular ? 'ring-4 ring-orange-400 ring-opacity-50' : ''}`}
                 onClick={() => setSelectedOffer(index)}
               >
-                <CardContent className="p-6 text-center relative">
+                <CardContent className="p-0 relative">
                   {offer.popular && (
-                    <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white">
+                    <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white text-sm px-4 py-1 z-10 rounded-full">
                       Most Popular
                     </Badge>
                   )}
                   
-                  <div className="mb-4">
-                    <h3 className="text-xl font-bold text-amber-900 mb-2">{offer.title}</h3>
-                    <p className="text-amber-700 text-sm">{offer.description}</p>
+                  {/* Product image */}
+                  <div className="aspect-video bg-gradient-to-br from-amber-100 to-orange-100 overflow-hidden">
+                    <img src={offer.image} alt={offer.title} className="w-full h-full object-cover" />
                   </div>
                   
-                  <div className="mb-4">
-                    <div className="text-3xl font-bold text-green-600">{offer.price}</div>
-                    <div className="text-lg text-gray-500 line-through">{offer.originalPrice}</div>
-                    <Badge className="bg-red-500 text-white mt-2">
-                      Save {offer.savings}
-                    </Badge>
+                  <div className="p-6">
+                    <div className="mb-4">
+                      <Badge className="bg-amber-100 text-amber-800 text-xs mb-2">{offer.subtitle}</Badge>
+                      <h3 className="text-xl font-bold text-slate-800 mb-2">{offer.title}</h3>
+                      <p className="text-slate-600 text-sm">{offer.description}</p>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="text-3xl font-bold text-green-600">{offer.price}</div>
+                        <div className="text-lg text-slate-400 line-through">{offer.originalPrice}</div>
+                      </div>
+                      <Badge className="bg-red-500 text-white">
+                        You Save {offer.savings}
+                      </Badge>
+                    </div>
+                    
+                    {selectedOffer === index && (
+                      <Badge className="bg-green-500 text-white w-full justify-center py-2">
+                        ✓ Selected for Purchase
+                      </Badge>
+                    )}
                   </div>
-                  
-                  {selectedOffer === index && (
-                    <Badge className="bg-green-500 text-white">
-                      ✓ Selected
-                    </Badge>
-                  )}
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          {/* Quick Order Form */}
-          <Card className="bg-white shadow-2xl border-2 border-amber-300">
-            <CardContent className="p-8">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold text-amber-900 mb-4">
-                  Complete Your Order in 30 Seconds!
+          {/* Professional order form */}
+          <Card className="bg-white shadow-2xl border-2 border-amber-300 rounded-3xl overflow-hidden">
+            <CardContent className="p-12">
+              <div className="text-center mb-12">
+                <h3 className="text-4xl font-bold text-slate-800 mb-4">
+                  Complete Your Order in Under 60 Seconds
                 </h3>
-                <p className="text-amber-700">
-                  Just enter your phone number and we'll call you to confirm your order
+                <p className="text-xl text-slate-600">
+                  Enter your phone number below and our expert will call you to confirm your order
                 </p>
               </div>
 
-              <div className="space-y-6">
-                <div>
-                  <label className="block text-lg font-semibold text-amber-900 mb-3">
+              <div className="space-y-8">
+                <div className="max-w-2xl mx-auto">
+                  <label className="block text-xl font-bold text-slate-800 mb-4">
                     Your Phone Number:
                   </label>
                   <div className="flex gap-4">
@@ -160,60 +181,63 @@ const QuickOrder = () => {
                       placeholder="Enter your 10-digit mobile number"
                       value={phoneNumber}
                       onChange={(e) => setPhoneNumber(e.target.value)}
-                      className="flex-1 text-lg py-6 border-amber-300 focus:border-amber-500"
+                      className="flex-1 text-xl py-8 px-6 border-2 border-slate-300 focus:border-amber-500 rounded-2xl"
                     />
                     <Button 
                       size="lg"
-                      className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-6 text-lg font-bold shadow-xl transform hover:scale-105 transition-all duration-300"
+                      className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-10 py-8 text-xl font-bold shadow-xl transform hover:scale-105 transition-all duration-300 rounded-2xl"
                       disabled={phoneNumber.length !== 10}
                     >
-                      <Phone className="w-5 h-5 mr-2" />
+                      <Phone className="w-6 h-6 mr-3" />
                       Call Me Now!
                     </Button>
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-4 bg-amber-50 rounded-lg p-6">
-                  <div className="flex items-center gap-3">
-                    <Truck className="w-8 h-8 text-green-600" />
-                    <div>
-                      <div className="font-bold text-amber-900">Free Delivery</div>
-                      <div className="text-sm text-amber-700">Above ₹500</div>
+                {/* Benefits grid */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-8">
+                  {benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md">
+                        <benefit.icon className="w-6 h-6 text-amber-600" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-slate-800">{benefit.title}</div>
+                        <div className="text-sm text-slate-600">{benefit.subtitle}</div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Gift className="w-8 h-8 text-purple-600" />
-                    <div>
-                      <div className="font-bold text-amber-900">Gift Packaging</div>
-                      <div className="text-sm text-amber-700">Complimentary</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Clock className="w-8 h-8 text-blue-600" />
-                    <div>
-                      <div className="font-bold text-amber-900">Same Day</div>
-                      <div className="text-sm text-amber-700">Delivery Available</div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
 
+                {/* Final CTA */}
                 <div className="text-center">
-                  <div className="flex items-center justify-center gap-2 text-green-600 font-medium mb-4">
-                    <Zap className="w-5 h-5" />
-                    <span>⚡ Order in next {timeLeft.hours}h {timeLeft.minutes}m and get extra 10% off!</span>
+                  <div className="flex items-center justify-center gap-3 text-green-600 font-semibold text-lg mb-6">
+                    <Zap className="w-6 h-6" />
+                    <span>⚡ Order now and get extra 10% off + free premium packaging!</span>
                   </div>
                   
                   <Button 
                     size="lg"
-                    className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white text-xl px-12 py-6 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse"
+                    className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white text-2xl px-16 py-8 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse"
                   >
-                    <ShoppingCart className="w-6 h-6 mr-3" />
-                    ORDER NOW - {offers[selectedOffer].price}
+                    <ShoppingCart className="w-8 h-8 mr-4" />
+                    SECURE MY ORDER - {offers[selectedOffer].price}
                   </Button>
                   
-                  <p className="text-sm text-amber-600 mt-3">
-                    ✅ 100% Secure | ✅ COD Available | ✅ Easy Returns
-                  </p>
+                  <div className="flex items-center justify-center gap-8 mt-6 text-slate-600">
+                    <div className="flex items-center gap-2">
+                      <Shield className="w-5 h-5 text-green-600" />
+                      <span>100% Secure Payment</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Truck className="w-5 h-5 text-blue-600" />
+                      <span>Cash on Delivery Available</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Star className="w-5 h-5 text-yellow-600" />
+                      <span>Easy 7-Day Returns</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </CardContent>
