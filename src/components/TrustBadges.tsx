@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Truck, Clock, Award, Users, Star, CheckCircle, Globe, Phone, MessageCircle, Mail, MapPin } from 'lucide-react';
@@ -95,15 +94,6 @@ const TrustBadges = () => {
     <section className="py-24 bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <div className="flex justify-center mb-8">
-            <div className="bg-white rounded-2xl p-6 shadow-xl border-4 border-yellow-400 hover:scale-110 transition-transform duration-500">
-              <img 
-                src="/lovable-uploads/47151413-d0d8-4ba9-af7a-660efbb98cfb.png" 
-                alt="DSR Authentic Foods Logo" 
-                className="w-32 h-auto object-contain"
-              />
-            </div>
-          </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 animate-scale-in">
             Why Choose DSR Authentic Foods?
           </h2>
@@ -130,7 +120,6 @@ const TrustBadges = () => {
           ))}
         </div>
 
-        {/* Stats section with high contrast and animations */}
         <div className="bg-gradient-to-br from-yellow-500 to-orange-500 rounded-3xl p-12 shadow-2xl border-4 border-white animate-scale-in mb-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
@@ -147,7 +136,6 @@ const TrustBadges = () => {
           </div>
         </div>
 
-        {/* Modern Contact Methods Grid */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12 animate-fade-in">Multiple Ways to Reach Us</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -164,19 +152,17 @@ const TrustBadges = () => {
           </div>
         </div>
 
-        {/* Enhanced Business Information Card */}
         <div className="text-center animate-fade-in delay-1000">
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-12 border-4 border-yellow-400 max-w-4xl mx-auto animate-scale-in shadow-2xl">
-            <div className="grid md:grid-cols-3 gap-8 items-center">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="text-center">
-                <div className="bg-white rounded-2xl p-4 inline-block mb-4 shadow-lg">
-                  <img 
-                    src="/lovable-uploads/47151413-d0d8-4ba9-af7a-660efbb98cfb.png" 
-                    alt="DSR Logo" 
-                    className="w-24 h-auto object-contain"
-                  />
+                <h3 className="text-3xl font-bold text-yellow-400 mb-4">DSR Authentic Foods</h3>
+                <div className="text-yellow-300 font-bold animate-pulse text-lg">
+                  "A Little Bliss in every bite" 🌟
                 </div>
-                <h3 className="text-2xl font-bold text-yellow-400">DSR Authentic Foods</h3>
+                <div className="text-slate-300 text-sm mt-2">
+                  @DSRauthenticfoods
+                </div>
               </div>
               
               <div className="text-center">
@@ -192,26 +178,15 @@ const TrustBadges = () => {
                   </div>
                 </div>
                 <div className="text-slate-300 mt-4">Authentic Foods Specialist</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="flex items-center justify-center gap-2 text-yellow-300 font-bold mb-4">
+                <div className="flex items-center justify-center gap-2 text-yellow-300 font-bold mt-4">
                   <MapPin className="w-6 h-6" />
-                  <span className="text-lg">Atreyapuram</span>
-                </div>
-                <div className="text-slate-400 mb-4">Andhra Pradesh, India</div>
-                <div className="text-yellow-300 font-bold animate-pulse text-lg">
-                  "A Little Bliss in every bite" 🌟
-                </div>
-                <div className="text-slate-300 text-sm mt-2">
-                  @DSRauthenticfoods
+                  <span className="text-lg">Atreyapuram, Andhra Pradesh, India</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Additional certifications with high contrast and animations */}
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold text-white mb-8 animate-fade-in">Our Certifications & Recognition</h3>
           <div className="flex flex-wrap justify-center gap-8 items-center">

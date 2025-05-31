@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -17,16 +16,8 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left space-y-8 animate-fade-in">
-            {/* Company Logo and Branding */}
+            {/* Company Branding */}
             <div className="flex flex-col items-center lg:items-start space-y-6">
-              <div className="bg-white rounded-3xl p-8 shadow-2xl border-4 border-yellow-400 hover:scale-110 transition-transform duration-500 animate-scale-in">
-                <img 
-                  src="/lovable-uploads/47151413-d0d8-4ba9-af7a-660efbb98cfb.png" 
-                  alt="DSR Authentic Foods Logo" 
-                  className="w-48 h-auto object-contain"
-                />
-              </div>
-              
               <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black hover:from-yellow-400 hover:to-orange-400 text-lg px-8 py-4 rounded-full shadow-lg font-bold animate-bounce">
                 <Award className="w-5 h-5 mr-2" />
                 Authentic • Traditional • Premium Quality Since 1800s
