@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter, Star } from 'lucide-react';
-
 const Footer = () => {
-  return (
-    <footer className="bg-gradient-to-br from-amber-900 via-amber-800 to-orange-900 text-white">
+  return <footer className="bg-gradient-to-br from-amber-900 via-amber-800 to-orange-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-4 gap-12">
           {/* Company Info */}
@@ -23,9 +20,7 @@ const Footer = () => {
 
             <div className="flex items-center gap-2">
               <div className="flex items-center">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
               </div>
               <span className="text-amber-200">4.9/5 from 2,847+ customers</span>
             </div>
@@ -50,7 +45,7 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-yellow-400" />
                 <div>
-                  <div className="font-semibold">+91 98765 43210</div>
+                  <div className="font-semibold">+91 94907 16411</div>
                   <div className="text-amber-200 text-sm">24/7 Customer Support</div>
                 </div>
               </div>
@@ -121,8 +116,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
