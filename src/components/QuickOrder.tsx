@@ -9,7 +9,6 @@ import { Phone, ShoppingCart, Clock, Zap, Gift, Truck, Shield, Star } from 'luci
 const QuickOrder = () => {
   const [timeLeft, setTimeLeft] = useState({ hours: 2, minutes: 30, seconds: 45 });
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [selectedOffer, setSelectedOffer] = useState(0);
 
   // Countdown timer
   useEffect(() => {
@@ -34,37 +33,6 @@ const QuickOrder = () => {
 
     return () => clearInterval(timer);
   }, []);
-
-  const offers = [
-    {
-      title: "Flash Sale Special",
-      subtitle: "Most Popular Choice",
-      description: "Buy 2 Get 1 FREE + Free Premium Delivery",
-      price: "₹1,098",
-      originalPrice: "₹1,647",
-      savings: "₹549",
-      popular: true,
-      image: "/placeholder.svg"
-    },
-    {
-      title: "Family Celebration Pack",
-      subtitle: "Perfect for Festivals",
-      description: "3kg Mixed Varieties + Elegant Gift Box",
-      price: "₹2,499",
-      originalPrice: "₹3,999",
-      savings: "₹1,500",
-      image: "/placeholder.svg"
-    },
-    {
-      title: "Taste Test Pack",
-      subtitle: "First Time Buyers",
-      description: "500g Premium Pack + Free Sample",
-      price: "₹549",
-      originalPrice: "₹799",
-      savings: "₹250",
-      image: "/placeholder.svg"
-    }
-  ];
 
   const benefits = [
     { icon: Truck, title: "Free Express Delivery", subtitle: "Above ₹500 nationwide" },
@@ -104,58 +72,6 @@ const QuickOrder = () => {
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Professional offer selection */}
-          <div className="grid lg:grid-cols-3 gap-8 mb-16">
-            {offers.map((offer, index) => (
-              <Card 
-                key={index}
-                className={`cursor-pointer transition-all duration-300 overflow-hidden ${
-                  selectedOffer === index 
-                    ? 'border-red-500 bg-gradient-to-br from-red-50 to-orange-50 shadow-2xl scale-105' 
-                    : 'border-slate-200 hover:border-red-300 hover:shadow-xl'
-                } ${offer.popular ? 'ring-4 ring-orange-400 ring-opacity-50' : ''}`}
-                onClick={() => setSelectedOffer(index)}
-              >
-                <CardContent className="p-0 relative">
-                  {offer.popular && (
-                    <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white text-sm px-4 py-1 z-10 rounded-full">
-                      Most Popular
-                    </Badge>
-                  )}
-                  
-                  {/* Product image */}
-                  <div className="aspect-video bg-gradient-to-br from-amber-100 to-orange-100 overflow-hidden">
-                    <img src={offer.image} alt={offer.title} className="w-full h-full object-cover" />
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="mb-4">
-                      <Badge className="bg-amber-100 text-amber-800 text-xs mb-2">{offer.subtitle}</Badge>
-                      <h3 className="text-xl font-bold text-slate-800 mb-2">{offer.title}</h3>
-                      <p className="text-slate-600 text-sm">{offer.description}</p>
-                    </div>
-                    
-                    <div className="mb-4">
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="text-3xl font-bold text-green-600">{offer.price}</div>
-                        <div className="text-lg text-slate-400 line-through">{offer.originalPrice}</div>
-                      </div>
-                      <Badge className="bg-red-500 text-white">
-                        You Save {offer.savings}
-                      </Badge>
-                    </div>
-                    
-                    {selectedOffer === index && (
-                      <Badge className="bg-green-500 text-white w-full justify-center py-2">
-                        ✓ Selected for Purchase
-                      </Badge>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
           </div>
 
           {/* Professional order form */}
@@ -221,7 +137,7 @@ const QuickOrder = () => {
                     className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white text-2xl px-16 py-8 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse"
                   >
                     <ShoppingCart className="w-8 h-8 mr-4" />
-                    SECURE MY ORDER - {offers[selectedOffer].price}
+                    SECURE MY ORDER NOW
                   </Button>
                   
                   <div className="flex items-center justify-center gap-8 mt-6 text-slate-600">
