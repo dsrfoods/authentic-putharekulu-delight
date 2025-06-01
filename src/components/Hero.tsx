@@ -14,9 +14,9 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 py-16 relative z-10 max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
           {/* Left Content */}
-          <div className="text-center lg:text-left space-y-6 animate-fade-in">
+          <div className="text-center lg:text-left space-y-6 animate-fade-in order-2 lg:order-1">
             {/* Company Branding */}
             <div className="flex flex-col items-center lg:items-start space-y-4">
               <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black hover:from-yellow-400 hover:to-orange-400 text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-full shadow-lg font-bold animate-bounce">
@@ -115,14 +115,14 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Enhanced Product Images */}
-          <div className="relative animate-scale-in delay-300 flex justify-center">
-            <div className="relative w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[600px] aspect-square">
+          <div className="relative animate-scale-in delay-300 flex justify-center order-1 lg:order-2 mb-8 lg:mb-0">
+            <div className="relative w-full max-w-[350px] sm:max-w-[400px] lg:max-w-[450px] xl:max-w-[500px] aspect-square">
               {/* Main product image with real putharekulu */}
               <div className="relative w-full h-full bg-gradient-to-br from-amber-50 to-orange-100 rounded-3xl shadow-2xl border-4 border-yellow-400 overflow-hidden hover:scale-105 transition-transform duration-500">
                 <img 
                   src="/lovable-uploads/eed5e66b-aa6c-4bba-b8f5-f9c33f71d3da.png" 
                   alt="Premium Sweet Putharekulu with almonds" 
-                  className="w-full h-full object-cover rounded-2xl" 
+                  className="w-full h-full object-cover object-center rounded-2xl" 
                 />
                 
                 {/* Overlay with product info */}
@@ -134,24 +134,24 @@ const Hero = () => {
                 </div>
               </div>
               
-              {/* Enhanced floating elements - adjusted for better mobile view */}
-              <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-red-600 text-white px-3 sm:px-6 py-2 sm:py-3 rounded-xl text-xs sm:text-sm font-bold shadow-xl animate-bounce border-2 border-white">
+              {/* Enhanced floating elements - positioned carefully to avoid overlap */}
+              <div className="absolute -top-3 -right-3 bg-red-600 text-white px-3 py-2 rounded-xl text-xs font-bold shadow-xl animate-bounce border-2 border-white z-10">
                 LIMITED STOCK!
               </div>
-              <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-green-600 text-white px-3 sm:px-6 py-2 sm:py-3 rounded-xl text-xs sm:text-sm font-bold shadow-xl border-2 border-white animate-pulse">
+              <div className="absolute -bottom-3 -left-3 bg-green-600 text-white px-3 py-2 rounded-xl text-xs font-bold shadow-xl border-2 border-white animate-pulse z-10">
                 ✓ Fresh Today
               </div>
-              <div className="absolute top-1/2 -left-4 sm:-left-8 bg-orange-600 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg transform -rotate-12 border-2 border-white animate-bounce delay-500">
+              <div className="absolute top-1/2 -left-6 bg-orange-600 text-white px-2 py-1 rounded-full text-xs font-bold shadow-lg transform -rotate-12 border-2 border-white animate-bounce delay-500 z-10">
                 25% OFF
               </div>
-              <div className="absolute top-1/4 -right-4 sm:-right-8 bg-blue-600 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs font-bold shadow-lg transform rotate-12 border-2 border-white animate-pulse delay-700">
+              <div className="absolute top-1/4 -right-6 bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-bold shadow-lg transform rotate-12 border-2 border-white animate-pulse delay-700 z-10">
                 ⭐ Best Quality
               </div>
             </div>
 
-            {/* Decorative elements with animations - adjusted positioning */}
-            <div className="absolute -top-8 sm:-top-16 -right-8 sm:-right-16 w-16 sm:w-32 h-16 sm:h-32 bg-yellow-400 rounded-full blur-3xl opacity-60 animate-pulse"></div>
-            <div className="absolute -bottom-8 sm:-bottom-16 -left-8 sm:-left-16 w-20 sm:w-40 h-20 sm:h-40 bg-orange-400 rounded-full blur-3xl opacity-50 animate-pulse delay-700"></div>
+            {/* Decorative elements with animations - positioned to avoid overlap */}
+            <div className="absolute -top-8 -right-8 w-16 h-16 bg-yellow-400 rounded-full blur-3xl opacity-60 animate-pulse"></div>
+            <div className="absolute -bottom-8 -left-8 w-20 h-20 bg-orange-400 rounded-full blur-3xl opacity-50 animate-pulse delay-700"></div>
           </div>
         </div>
       </div>
