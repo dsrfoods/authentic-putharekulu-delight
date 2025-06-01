@@ -2,10 +2,8 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Star, Award, Clock, ShieldCheck, ArrowRight, Phone, MessageCircle, Mail } from 'lucide-react';
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-amber-900">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-amber-900">
       {/* Professional Background Pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-20 left-20 w-72 h-72 bg-amber-400 rounded-full blur-3xl animate-pulse"></div>
@@ -43,9 +41,7 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fade-in delay-700">
               <div className="flex items-center gap-2 bg-white rounded-full px-6 py-3 border-2 border-yellow-400 shadow-lg hover:scale-105 transition-transform">
                 <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />)}
                 </div>
                 <span className="text-slate-900 font-bold">4.9/5 (2,847 reviews)</span>
               </div>
@@ -62,19 +58,12 @@ const Hero = () => {
             {/* Modern CTA Section */}
             <div className="space-y-6 animate-fade-in delay-1000">
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-black text-xl px-10 py-6 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 group font-bold flex-1"
-                >
+                <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-black text-xl px-10 py-6 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 group font-bold flex-1">
                   Order Premium Putharekulu Now
                   <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 
-                <Button 
-                  variant="outline"
-                  size="lg" 
-                  className="bg-white text-slate-900 border-4 border-yellow-400 hover:bg-yellow-400 hover:text-black text-xl px-8 py-6 rounded-full shadow-xl transform hover:scale-105 transition-all duration-300 font-bold"
-                >
+                <Button variant="outline" size="lg" className="bg-white text-slate-900 border-4 border-yellow-400 hover:bg-yellow-400 hover:text-black text-xl px-8 py-6 rounded-full shadow-xl transform hover:scale-105 transition-all duration-300 font-bold">
                   <MessageCircle className="w-6 h-6 mr-3" />
                   Chat with Us
                 </Button>
@@ -105,7 +94,7 @@ const Hero = () => {
                     <Mail className="w-6 h-6" />
                     <div>
                       <div className="font-bold text-lg">WhatsApp Orders</div>
-                      <div className="text-xl font-bold">+91 9490781341</div>
+                      <div className="text-xl font-bold">+91 940716411</div>
                     </div>
                   </div>
                 </div>
@@ -127,11 +116,7 @@ const Hero = () => {
             <div className="relative mx-auto w-full max-w-[600px] aspect-square">
               {/* Main product image with real putharekulu */}
               <div className="relative w-full h-full bg-gradient-to-br from-amber-50 to-orange-100 rounded-3xl shadow-2xl border-4 border-yellow-400 overflow-hidden hover:scale-105 transition-transform duration-500">
-                <img 
-                  src="/lovable-uploads/eed5e66b-aa6c-4bba-b8f5-f9c33f71d3da.png" 
-                  alt="Premium Sweet Putharekulu with almonds" 
-                  className="w-full h-full object-cover rounded-2xl"
-                />
+                <img src="/lovable-uploads/eed5e66b-aa6c-4bba-b8f5-f9c33f71d3da.png" alt="Premium Sweet Putharekulu with almonds" className="w-full h-full object-cover rounded-2xl" />
                 
                 {/* Overlay with product info */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-8">
@@ -163,8 +148,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;

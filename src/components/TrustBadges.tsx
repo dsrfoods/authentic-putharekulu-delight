@@ -134,23 +134,7 @@ const TrustBadges = () => {
           </div>
         </div>
 
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-white text-center mb-12 animate-fade-in">Multiple Ways to Reach Us</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {contactMethods.map((method, index) => <Card key={index} className={`${method.bgColor} ${method.hoverColor} border-2 border-white hover:border-yellow-400 transition-all duration-300 hover:scale-105 cursor-pointer animate-fade-in group`} style={{
-            animationDelay: `${index * 200}ms`
-          }}>
-                <CardContent className="p-6 text-center text-white">
-                  <method.icon className="w-8 h-8 mx-auto mb-4 group-hover:scale-110 transition-transform animate-bounce" style={{
-                animationDelay: `${index * 150}ms`
-              }} />
-                  <h4 className="font-bold text-lg mb-2">{method.title}</h4>
-                  <p className="font-bold text-xl mb-1 text-center">{method.detail}</p>
-                  <p className="text-sm opacity-90">{method.subtitle}</p>
-                </CardContent>
-              </Card>)}
-          </div>
-        </div>
+        
 
         <div className="text-center animate-fade-in delay-1000">
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-12 border-4 border-yellow-400 max-w-4xl mx-auto animate-scale-in shadow-2xl">
