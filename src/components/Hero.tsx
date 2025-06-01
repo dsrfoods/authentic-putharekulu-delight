@@ -85,7 +85,7 @@ const Hero = () => {
                     <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                     <div>
                       <div className="font-bold text-sm sm:text-base lg:text-lg">Orders</div>
-                      <div className="text-lg sm:text-xl lg:text-2xl font-bold">7659089234</div>
+                      <div className="text-lg sm:text-xl lg:text-2xl font-bold">+91 7659089234</div>
                     </div>
                   </div>
                 </div>
