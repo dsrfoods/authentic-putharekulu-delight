@@ -15,8 +15,8 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 py-12 relative z-10 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center min-h-[80vh]">
-          {/* Left Content */}
-          <div className="text-center lg:text-left space-y-6 animate-fade-in order-2 lg:order-1">
+          {/* Left Content - Business Name and Details */}
+          <div className="text-center lg:text-left space-y-6 animate-fade-in order-1 lg:order-1">
             {/* Company Branding */}
             <div className="flex flex-col items-center lg:items-start space-y-4">
               <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black hover:from-yellow-400 hover:to-orange-400 text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-full shadow-lg font-bold animate-bounce">
@@ -25,9 +25,10 @@ const Hero = () => {
               </Badge>
             </div>
             
-            <div className="space-y-4">
+            {/* Centered Business Name */}
+            <div className="space-y-4 text-center lg:text-left">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                <span className="text-white animate-fade-in">DSR</span>
+                <span className="text-white animate-fade-in block">DSR</span>
                 <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-300 bg-clip-text text-transparent font-extrabold animate-scale-in">
                   AUTHENTIC
                 </span>
@@ -36,7 +37,7 @@ const Hero = () => {
                 </span>
               </h1>
               
-              <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-slate-200 max-w-2xl leading-relaxed animate-fade-in delay-500">
+              <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-slate-200 max-w-2xl leading-relaxed animate-fade-in delay-500 mx-auto lg:mx-0">
                 Experience the <span className="font-bold text-yellow-300">authentic taste of Andhra Pradesh</span> with our traditional Sweet Putharekulu, handcrafted using 200-year-old family recipes with pure love and tradition.
               </p>
             </div>
@@ -120,7 +121,7 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Enhanced Product Images */}
-          <div className="relative animate-scale-in delay-300 flex justify-center order-1 lg:order-2 mb-8 lg:mb-0">
+          <div className="relative animate-scale-in delay-300 flex justify-center order-2 lg:order-2 mb-8 lg:mb-0">
             <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[380px] xl:max-w-[420px] aspect-square">
               {/* Main product image with real putharekulu */}
               <div className="relative w-full h-full bg-gradient-to-br from-amber-50 to-orange-100 rounded-3xl shadow-2xl border-4 border-yellow-400 overflow-hidden hover:scale-105 transition-transform duration-500">
