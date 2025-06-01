@@ -1,12 +1,9 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Star, Award, Clock, ShieldCheck, ArrowRight, Phone, MessageCircle, Mail } from 'lucide-react';
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-amber-900">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-amber-900">
       {/* Professional Background Pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-20 left-20 w-72 h-72 bg-amber-400 rounded-full blur-3xl animate-pulse"></div>
@@ -67,12 +64,7 @@ const Hero = () => {
                   <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="bg-white text-slate-900 border-4 border-yellow-400 hover:bg-yellow-400 hover:text-black text-base sm:text-lg lg:text-xl px-6 sm:px-8 py-4 sm:py-5 lg:py-6 rounded-full shadow-xl transform hover:scale-105 transition-all duration-300 font-bold"
-                  onClick={() => window.open('https://wa.me/917659089234', '_blank')}
-                >
+                <Button variant="outline" size="lg" className="bg-white text-slate-900 border-4 border-yellow-400 hover:bg-yellow-400 hover:text-black text-base sm:text-lg lg:text-xl px-6 sm:px-8 py-4 sm:py-5 lg:py-6 rounded-full shadow-xl transform hover:scale-105 transition-all duration-300 font-bold" onClick={() => window.open('https://wa.me/917659089234', '_blank')}>
                   <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
                   Chat with Us
                 </Button>
@@ -92,7 +84,7 @@ const Hero = () => {
                   <div className="flex items-center gap-3 text-white">
                     <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                     <div>
-                      <div className="font-bold text-sm sm:text-base lg:text-lg">📞 Call for Fresh Orders</div>
+                      <div className="font-bold text-sm sm:text-base lg:text-lg">Orders</div>
                       <div className="text-lg sm:text-xl lg:text-2xl font-bold">7659089234</div>
                     </div>
                   </div>
@@ -125,11 +117,7 @@ const Hero = () => {
             <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[380px] xl:max-w-[420px] aspect-square">
               {/* Main product image with real putharekulu */}
               <div className="relative w-full h-full bg-gradient-to-br from-amber-50 to-orange-100 rounded-3xl shadow-2xl border-4 border-yellow-400 overflow-hidden hover:scale-105 transition-transform duration-500">
-                <img 
-                  src="/lovable-uploads/eed5e66b-aa6c-4bba-b8f5-f9c33f71d3da.png" 
-                  alt="Premium Sweet Putharekulu with almonds" 
-                  className="w-full h-full object-cover object-center rounded-2xl" 
-                />
+                <img src="/lovable-uploads/eed5e66b-aa6c-4bba-b8f5-f9c33f71d3da.png" alt="Premium Sweet Putharekulu with almonds" className="w-full h-full object-cover object-center rounded-2xl" />
                 
                 {/* Overlay with product info */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4 sm:p-6 lg:p-8">
@@ -161,8 +149,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
