@@ -95,7 +95,7 @@ const Hero = () => {
                     <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                     <div>
                       <div className="font-bold text-sm sm:text-base lg:text-lg">WhatsApp Orders</div>
-                      <div className="text-base sm:text-lg lg:text-xl font-bold">+91 940716411</div>
+                      <div className="text-base sm:text-lg lg:text-xl font-bold">+91 9490716411</div>
                     </div>
                   </div>
                 </div>
