@@ -1,7 +1,9 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Star, Award, Clock, ShieldCheck, ArrowRight, Phone, MessageCircle, Mail } from 'lucide-react';
+
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-amber-900">
       {/* Professional Background Pattern */}
@@ -13,9 +15,9 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-12 relative z-10 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center min-h-[80vh]">
           {/* Left Content - Business Name and Details */}
-          <div className="text-center lg:text-left space-y-6 animate-fade-in order-1 lg:order-1">
+          <div className="text-center space-y-6 animate-fade-in order-2 lg:order-1">
             {/* Company Branding */}
-            <div className="flex flex-col items-center lg:items-start space-y-4">
+            <div className="flex flex-col items-center space-y-4">
               <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black hover:from-yellow-400 hover:to-orange-400 text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-full shadow-lg font-bold animate-bounce">
                 <Award className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Authentic • Traditional • Premium Quality Since 1800s
@@ -23,7 +25,7 @@ const Hero = () => {
             </div>
             
             {/* Centered Business Name */}
-            <div className="space-y-4 text-center lg:text-left">
+            <div className="space-y-4 text-center">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                 <span className="text-white animate-fade-in block">DSR</span>
                 <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-300 bg-clip-text text-transparent font-extrabold animate-scale-in">
@@ -34,12 +36,12 @@ const Hero = () => {
                 </span>
               </h1>
               
-              <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-slate-200 max-w-2xl leading-relaxed animate-fade-in delay-500 mx-auto lg:mx-0">
+              <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-slate-200 max-w-2xl leading-relaxed animate-fade-in delay-500 mx-auto">
                 Experience the <span className="font-bold text-yellow-300">authentic taste of Andhra Pradesh</span> with our traditional Sweet Putharekulu, handcrafted using 200-year-old family recipes with pure love and tradition.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start animate-fade-in delay-700">
+            <div className="flex flex-wrap gap-3 sm:gap-4 justify-center animate-fade-in delay-700">
               <div className="flex items-center gap-2 bg-white rounded-full px-3 sm:px-4 lg:px-6 py-2 sm:py-3 border-2 border-yellow-400 shadow-lg hover:scale-105 transition-transform">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-500 fill-current" />)}
@@ -58,7 +60,7 @@ const Hero = () => {
 
             {/* Modern CTA Section */}
             <div className="space-y-4 sm:space-y-6 animate-fade-in delay-1000">
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-black text-base sm:text-lg lg:text-xl px-6 sm:px-8 lg:px-10 py-4 sm:py-5 lg:py-6 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 group font-bold flex-1">
                   Order Premium Putharekulu Now
                   <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 group-hover:translate-x-1 transition-transform" />
@@ -70,7 +72,7 @@ const Hero = () => {
                 </Button>
               </div>
               
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-8 text-sm">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
                   <span className="text-yellow-300 font-bold">⏰ Only 47 boxes left today!</span>
@@ -113,7 +115,7 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Enhanced Product Images */}
-          <div className="relative animate-scale-in delay-300 flex justify-center order-2 lg:order-2 mb-8 lg:mb-0">
+          <div className="relative animate-scale-in delay-300 flex justify-center order-1 lg:order-2 mb-8 lg:mb-0">
             <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[380px] xl:max-w-[420px] aspect-square">
               {/* Main product image with real putharekulu */}
               <div className="relative w-full h-full bg-gradient-to-br from-amber-50 to-orange-100 rounded-3xl shadow-2xl border-4 border-yellow-400 overflow-hidden hover:scale-105 transition-transform duration-500">
@@ -151,4 +153,5 @@ const Hero = () => {
       </div>
     </section>;
 };
+
 export default Hero;
